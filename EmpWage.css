@@ -1,7 +1,7 @@
-h1{
+header{
     text-align: center;
     color: black;
     text-decoration: solid;
-    text-shadow: 5px goldenrod;
+    text-shadow: 3px 3px 1px goldenrod;
     background-color: darkgrey;
 }
