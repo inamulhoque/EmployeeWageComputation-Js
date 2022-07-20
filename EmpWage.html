@@ -18,10 +18,12 @@
         let partTimeHour = 4;
         let fullTimeHour = 8;
         const perHourWage = 20;
-        const numOfWorkingHour = 20;
+        const maxWorkingHour = 160;
         let totalWorkingHour = 0;
+        const maxWorkingDay = 20;
+        let totalWorkingDay = 0;
         function randomFunc() {
-            for (let i = 1; i <= 20; i++) {
+            while (totalWorkingHour<maxWorkingHour && totalWorkingDay<maxWorkingDay) {
                 const randomNum = Math.floor(Math.random() * 10) % 3;
                 switch (randomNum) {
                     case 1:
@@ -35,9 +37,10 @@
                         break;
                 }
             totalWorkingHour = totalWorkingHour+empHour;
+            totalWorkingDay++;
             }
             let wage = totalWorkingHour*perHourWage;
-            document.write("Monthly wage: "+wage);
+            document.write("Total wage = "+wage+" , total days worked = "+totalWorkingDay+" , total working hour = "+totalWorkingHour);
         }
         randomFunc();    
     </script>
