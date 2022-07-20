@@ -12,13 +12,28 @@
         <h2>Welcome to Employee Wage Computation program</h2>
     </header>
     <script>
+        let empHour = 0;
+        const partTimeHour = 4;
+        const fullTimeHour = 8;
+        const perHourWage = 20;
         function randomFunc() {
-            const randomNum = Math.floor(Math.random()*10)%2;
-            if (randomNum == 1) {
-                document.write("Employee is present");
-            } else {
-                document.write("Employee is absent");
+            const randomNum = Math.floor(Math.random()*10)%3;
+            switch (randomNum) {
+                case 1:
+                    empHour = partTimeHour;
+                    document.write("Part time presnt\n");
+                    break;
+                case 2:
+                    empHour = fullTimeHour;
+                    document.write("Full time present\n");
+                    break;    
+                default:
+                    empHour = 0;
+                    document.write("Employee is absent\n");
+                    break;
             }
+            let empWage = empHour*perHourWage;
+            document.write("Daily wage of Employee is: "+empWage);
         }
         randomFunc();    
     </script>
