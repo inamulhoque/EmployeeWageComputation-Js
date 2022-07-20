@@ -21,19 +21,17 @@
             switch (randomNum) {
                 case 1:
                     empHour = partTimeHour;
-                    document.write("Part time presnt\n");
+                    document.write("Part time presnt, Work hour is: \n"+empHour);
                     break;
                 case 2:
                     empHour = fullTimeHour;
-                    document.write("Full time present\n");
+                    document.write("Full time present, Work hour is: \n"+empHour);
                     break;    
                 default:
                     empHour = 0;
-                    document.write("Employee is absent\n");
+                    document.write("Employee is absent, Work hour is: \n"+empHour);
                     break;
             }
-            let empWage = empHour*perHourWage;
-            document.write("Daily wage of Employee is: "+empWage);
         }
         randomFunc();    
     </script>
